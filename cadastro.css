@@ -1,0 +1,10 @@
+header {
+  background-color: rgb(32, 142, 161);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
