@@ -1,63 +1,61 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  font: bolder;
+** {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  border: none;
+  outline: none;
 }
 
 header {
-  background-color: rgb(32, 142, 161);
-  color: rgb(0, 0, 0);
-  text-align: center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  background-color: blue;
+  padding: 1em;
 }
+
 header p {
-  font-size: 3rem;
+  font-size: 20px;
+  color: white;
+  justify-content: center;
 }
-img {
-  max-width: 200px;
-  max-height: 150px;
+
+.logo {
+  max-width: 80px;
+  max-height: 60px;
+  display: flex;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
 nav {
-  list-style: none;
-  display: inline-block;
-  padding: 0 20px;
-}
-.navbar {
-  /*
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;*/
-  background-color: rgb(32, 142, 161);
-  color: #fff;
-}
-.menu {
-  display: flex;
-  gap: 60px;
-  list-style-type: none;
+  padding: 20px;
 }
 
-.menu li a {
-  color: black;
+a {
   text-decoration: none;
 }
 
-main {
-  padding: 10px;
-  margin: 15px;
+li {
+  list-style: none;
 }
+
 article {
-  width: 100%;
-  border: 1px solid #06aa48;
+  width: 360px;
+  border: 1px solid blue;
   margin: 10px;
 }
+
 img {
   width: 100%;
 }
+
 p {
   color: #333;
   text-align: justify;
@@ -70,6 +68,10 @@ figcaption {
   margin-left: 10px;
   margin-right: 10px;
 }
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
 h2 {
   text-align: justify;
   margin-left: 10px;
@@ -77,31 +79,67 @@ h2 {
   margin-top: 10px;
   color: #06aa48;
 }
-@media (min-width: 480px) {
-  main {
-    grid-template-columns: 1fr;
-  }
+
+main {
+  display: flex;
+  margin: 15px;
+  background-color: white;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
-@media (min-width: 640px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+footer {
+  text-align: center;
+  background-color: #99e0b5;
+  color: white;
+  padding: 1em;
 }
 
-@media (min-width: 900px) {
-  main {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.menu {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
 }
 
-@media (min-width: 1020px) {
-  main {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+.menu li:hover {
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
 
-body {
-  border-collapse: collapse;
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
