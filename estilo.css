@@ -145,6 +145,7 @@ input[type="checkbox"] {
   .hamburger {
     display: block;
   }
+<<<<<<< HEAD
 }
 .dark {
   background-color: #4c0033;
@@ -154,4 +155,6 @@ input[type="checkbox"] {
 .ligth {
   background-color: #f2f7a1;
   color: #46c2cb;
+=======
+>>>>>>> d2b9f8cd553a075a1afc437e8f734cd2edd2fe2f
 }
