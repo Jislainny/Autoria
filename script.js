@@ -7,7 +7,13 @@ function toDarkSide() {
   section.classList.add("dark");
   section.classList.remove("ligth")
 }
-function toDarkSide() {
-    section.classList.add("dark");
-    section.classList.remove("ligth")
+function toJedSide() {
+    section.classList.add("light");
+    section.classList.remove("dark")
   }
+  
+  const chk = document.getElementById('chk')
+
+chk.addEventListener('change', () => {
+  document.body.classList.toggle('dark')
+})
